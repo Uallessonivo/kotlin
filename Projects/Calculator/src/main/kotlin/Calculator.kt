@@ -1,4 +1,5 @@
 import javafx.fxml.FXML
+import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.VBox
@@ -13,11 +14,13 @@ class Calculator: View() {
         title = "Kotlin Calculator"
 
         root.lookupAll(".button").forEach { b ->
-            b.setOnMouseClicked {  }
+            b.setOnMouseClicked {
+                operator((b as Button).text)
+            }
         }
 
         root.addEventFilter(KeyEvent.KEY_TYPED) {
-
+            operator(it.character.uppercase().replace("\r", "="))
         }
     }
 
@@ -48,9 +51,10 @@ class Calculator: View() {
                 }
                 "C" -> onAction(Operator.add(0))
                 "+/-" -> {
-                    // TODO
+                    onAction(Operator.add(-1 * displayValue))
+                    operator("=")
                 }
-                "=" ->
+                "=" -> display.text = state.calculate(displayValue).toString()
             }
         }
     }
