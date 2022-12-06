@@ -3,7 +3,7 @@ package adventOfCode.passwordPhilosophy
 import java.io.File
 
 fun main() {
-    val passwords = File("src/main/kotlin/AdventOfCode/passwordPhilosophy/input.txt")
+    val passwords = File("src/course.main/kotlin/AdventOfCode/passwordPhilosophy/course.input.txt")
         .readLines()
         .map(PasswordWithPolicy::parse)
 

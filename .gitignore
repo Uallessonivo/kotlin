@@ -1,3 +1,7 @@
+.idea
+**/idea/
+!src/**/idea/
+
 ### Maven template
 target/
 pom.xml.tag

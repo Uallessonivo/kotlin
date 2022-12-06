@@ -8,7 +8,7 @@ fun main() {
     val dog = Dog("Hulk")
     val bird = Bird("Hex")
 
-    // Dog
+    // course.Dog
     dog.fly()
     dog.run()
     dog.play()

@@ -19,12 +19,11 @@ package leetCode
 //Output: true
 
 fun main() {
-    val nums1 = Solution()
-    val nums2 = Solution()
+    val num = Solution()
 
-    println(nums1.containsDuplicate(intArrayOf(1,2,3,1)))
-    println(nums1.containsDuplicate(intArrayOf(3,3)))
-    println(nums1.containsDuplicate(intArrayOf(1,2,3,4)))
+    println(num.containsDuplicate(intArrayOf(1,2,3,1)))
+    println(num.containsDuplicate(intArrayOf(3,3)))
+    println(num.containsDuplicate(intArrayOf(1,2,3,4)))
 }
 
 class Solution {

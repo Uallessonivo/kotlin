@@ -22,12 +22,12 @@ package leetCode
 
 
 fun main() {
-    val response = MaxSubarray()
+    val response = MaxSubArray()
 
     println(response.maxSubArray(intArrayOf(5,4,-1,7,8)))
 }
 
-class MaxSubarray {
+class MaxSubArray {
     fun maxSubArray(nums: IntArray): Int {
         var maxSub = nums[0]
         var curSum = 0

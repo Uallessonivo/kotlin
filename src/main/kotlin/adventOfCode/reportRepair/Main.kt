@@ -3,7 +3,7 @@ package adventOfCode.reportRepair
 import java.io.File
 
 fun main() {
-    val numbers = File("src/main/kotlin/AdventOfCode/ReportRepair/input.txt")
+    val numbers = File("src/course.main/kotlin/AdventOfCode/ReportRepair/course.input.txt")
         .readLines()
         .map(String::toInt)
 
