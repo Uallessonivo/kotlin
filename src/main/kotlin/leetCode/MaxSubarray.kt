@@ -1,7 +1,5 @@
 package leetCode
 
-import kotlin.math.max
-
 // Given an integer array nums, find the subarray which has the largest sum and return its sum.
 
 //Example 1:
@@ -24,12 +22,12 @@ import kotlin.math.max
 
 
 fun main() {
-    val response = Solution2()
+    val response = MaxSubarray()
 
     println(response.maxSubArray(intArrayOf(5,4,-1,7,8)))
 }
 
-class Solution2 {
+class MaxSubarray {
     fun maxSubArray(nums: IntArray): Int {
         var maxSub = nums[0]
         var curSum = 0
@@ -37,10 +35,9 @@ class Solution2 {
         for (n in nums) {
             if (curSum < 0) {
                 curSum = 0
-            } else {
-                curSum += n
-                maxSub = max(maxSub, curSum)
             }
+            curSum += n
+            maxSub = Math.max(maxSub, curSum)
         }
 
         return maxSub
